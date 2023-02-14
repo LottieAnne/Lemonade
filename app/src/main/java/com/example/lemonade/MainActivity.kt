@@ -47,6 +47,22 @@ fun LemonTextAndImage(modifier: Modifier = Modifier) {
             fontSize = 18.sp
         )
         Image(painter = painterResource(R.drawable.lemon_tree),contentDescription = stringResource(R.string.lemon_tree_content_description))
+        Text(
+            text = stringResource(R.string.lemon_squeeze),
+            fontSize = 18.sp
+        )
+        Image(painter = painterResource(R.drawable.lemon_squeeze),contentDescription = stringResource(R.string.lemon_content_description))
+        Text(
+            text = stringResource(R.string.lemon_drink),
+            fontSize = 18.sp
+        )
+        Image(painter = painterResource(R.drawable.lemon_drink),contentDescription = stringResource(R.string.lemonade_content_description))
+        Text(
+            text = stringResource(R.string.lemon_empty_glass),
+            fontSize = 18.sp
+        )
+        Image(painter = painterResource(R.drawable.lemon_restart),contentDescription = stringResource(R.string.empty_glass_content_description))
+
     }
 }
 
