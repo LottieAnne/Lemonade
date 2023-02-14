@@ -56,6 +56,7 @@ fun LemonApp() {
                     contentDescriptionResourceId = R.string.lemon_tree_content_description,
                     onImageClick = {
                         currentStep = 2
+                        squeezeCount = (2..4).random()
                     }
                 )
             }
@@ -65,7 +66,13 @@ fun LemonApp() {
                     drawableResourceId = R.drawable.lemon_squeeze,
                     contentDescriptionResourceId = R.string.lemon_content_description,
                     onImageClick = {
-                        currentStep = 3
+                        // クリックするたびにCount減らす
+                        squeezeCount--
+
+                        // squeezeCountが0になったら次のステップへ
+                        if ( squeezeCount == 0) {
+                            currentStep = 3
+                        }
                     }
                 )
             }
